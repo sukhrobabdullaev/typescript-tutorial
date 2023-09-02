@@ -1,0 +1,20 @@
+1. Compiling tool for typescript
+2. Type Basics
+3. Object and Arrays
+4. explicit types => arrays, union types and objects
+5. Dynamic types (any)
+6. Function basics (void )
+7. Type Aliases
+8. Function Signatures
+
+9. DOM and Type Casting
+10. Classes
+11. Public, Private and Readonly
+12. Modules
+13. Interfaces
+14. Interfaces with Classes
+15. Rendering an HTML template
+16. Generics
+17. Enums
+18. Tuples
+19. Wrap Up
