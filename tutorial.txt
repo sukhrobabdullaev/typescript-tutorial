@@ -18,3 +18,5 @@
 17. Enums
 18. Tuples
 19. Wrap Up
+
+https://www.typescriptlang.org/docs/handbook/intro.html this links helps me to learn in a depth
