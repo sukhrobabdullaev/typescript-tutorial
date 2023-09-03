@@ -58,7 +58,7 @@ const greetGuitarist = (guitaristBro: guitarist) => {
 // enums
 
 enum Grade {
-  U=2,
+  U = 2,
   D,
   C,
   B,
@@ -66,3 +66,86 @@ enum Grade {
 }
 
 console.log(Grade.U);
+
+// type aliases
+
+type strOrNum = string | number;
+
+type stringOrArr = (string | number)[];
+
+type GuitariST = {
+  name?: string;
+  active: boolean;
+  albums: (string | number)[];
+};
+
+type userId = strOrNum;
+
+// literal types
+
+let myName: "dave";
+let userName: "dave" | "john" | "any";
+userName = "dave";
+
+{
+  userName = "any";
+  console.log(userName);
+}
+
+// FUNCTIONS
+const add2 = (a: number, b: number): number => {
+  return a + b;
+};
+
+const logMessage = (message: any): void => {
+  console.log(message);
+};
+
+logMessage("hello");
+logMessage(add2(2, 3));
+
+let subtact = function (c: number, d: number): number {
+  return c - d;
+};
+
+// function signature
+type mathFunc = (a: number, b: number) => number;
+// interface mathFunc {
+//   (a: number, b: number): number;
+// }
+
+let mulTiply: mathFunc = function (c, d) {
+  return c * d;
+};
+
+// REST OPERATORS
+const total = (a: number, ...nums: number[]): number => {
+  return a + nums.reduce((prev, curr) => prev + curr);
+};
+
+console.log(total(10, 2, 3));
+
+const createErr = (errmsg: string): never => {
+  throw new Error(errmsg);
+};
+
+const infinite = () => {
+  let i: number = 1;
+  while (true) {
+    i++;
+    if (i > 100) break;
+  }
+};
+
+const isNumber = (value: any): boolean => {
+  return typeof value === "number" ? true : false;
+};
+
+console.log(isNumber("333"));
+// type never
+const numberOrString = (value: number | string): string => {
+  if (typeof value === "string") return "string";
+  return "somehting";
+};
+
+// TYPE CASTING AND ASSERTATION----------------------DOM...........

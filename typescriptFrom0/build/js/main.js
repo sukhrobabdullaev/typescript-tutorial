@@ -46,3 +46,56 @@ var Grade;
     Grade[Grade["A"] = 6] = "A";
 })(Grade || (Grade = {}));
 console.log(Grade.U);
+// literal types
+let myName;
+let userName;
+userName = "dave";
+{
+    userName = "any";
+    console.log(userName);
+}
+// FUNCTIONS
+const add2 = (a, b) => {
+    return a + b;
+};
+const logMessage = (message) => {
+    console.log(message);
+};
+logMessage("hello");
+logMessage(add2(2, 3));
+let subtact = function (c, d) {
+    return c - d;
+};
+// interface mathFunc {
+//   (a: number, b: number): number;
+// }
+let mulTiply = function (c, d) {
+    return c * d;
+};
+// REST OPERATORS
+const total = (a, ...nums) => {
+    return a + nums.reduce((prev, curr) => prev + curr);
+};
+console.log(total(10, 2, 3));
+const createErr = (errmsg) => {
+    throw new Error(errmsg);
+};
+const infinite = () => {
+    let i = 1;
+    while (true) {
+        i++;
+        if (i > 100)
+            break;
+    }
+};
+const isNumber = (value) => {
+    return typeof value === "number" ? true : false;
+};
+console.log(isNumber("333"));
+// type never
+const numberOrString = (value) => {
+    if (typeof value === "string")
+        return "string";
+    return "somehting";
+};
+// TYPE CASTING AND ASSERTATION----------------------DOM...........
